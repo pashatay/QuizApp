@@ -38,6 +38,7 @@ let question = $('.question');
 let answers = $('.answrBttn');
 let endGameMsg = 'That was the last question! Ready to see your score? Press "Result"!';
 
+
 startGame();
 
 function startGame(e){
@@ -88,23 +89,22 @@ $('.answers').on('click', '.answrBttn', function(){
     $('.nextBttn').attr("disabled", false);
 });
 checkTheAnswer();
+activateNextBttn();
 };
 
 
 function checkTheAnswer(){
-$('.answers').on('click', '.answrBttn', function(){
-    
       if(userChoice === qts[qtsindx].right){
           //alert('right');
           score+=1;
       }
-    }); 
-    activateNextBttn();
 }
 
 function activateNextBttn(){  
+    qtsindx+=1;
     $('.nextBttn').on('click', function(){
-        qtsindx+=1;
+        
         postAQuestion(qts);
+        console.log("qtsindx: " + qtsindx);
     })
 };
