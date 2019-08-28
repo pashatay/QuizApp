@@ -51,9 +51,8 @@ function startGame(e){
     })
 }
 
-
 function postAQuestion(arr){
-    if(qtsindx > 10){
+    if(qtsindx >= 10){
         result();
     }else{
     $('.nextBttn').removeClass('hideBttn');
@@ -61,7 +60,7 @@ function postAQuestion(arr){
     question.html(arr[qtsindx].question);
     $('.answers').empty();
     addAnswersToTheQuestion(arr);
-    }
+  }
 }
 
 function result(){
@@ -70,7 +69,8 @@ function result(){
     $('.answers').empty();
     $('.resultBttn').removeClass('hideBttn');
     $('.resultBttn').on('click', function(){
-        alert(score);
+        question.html(`Your total score is ${score}!`);
+        $('.resultBttn').addClass('hideBttn');
     })
 }
 
@@ -82,29 +82,30 @@ function addAnswersToTheQuestion(arr){
     pickTheAnswer();
 }
 
-
 function pickTheAnswer(){
+    console.log("qtsindx: " + qtsindx);
+    console.log("score: " + score);
 $('.answers').on('click', '.answrBttn', function(){
     userChoice = this.innerText;
     $('.nextBttn').attr("disabled", false);
 });
-checkTheAnswer();
-activateNextBttn();
 };
 
-
-function checkTheAnswer(){
-      if(userChoice === qts[qtsindx].right){
-          //alert('right');
-          score+=1;
-      }
+function listenToNext() {
+  // Do it like this because it only adds one listener
+  $(document).on('click', '.nextBttn', function(){    
+    scoreCount();      
+    postAQuestion(qts);
+  })
 }
 
-function activateNextBttn(){  
-    qtsindx+=1;
-    $('.nextBttn').on('click', function(){
-        
-        postAQuestion(qts);
-        console.log("qtsindx: " + qtsindx);
-    })
+function scoreCount(){
+    if(userChoice === qts[qtsindx].right){
+        score++;
+        qtsindx++;
+      }else{
+    qtsindx++;
+    }
 };
+
+listenToNext();
