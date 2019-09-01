@@ -8,30 +8,28 @@
                 integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
                 crossorigin="anonymous"></script>
     </head>
+    <header>
+       <h1>World Capitals Quizzz</h1> 
+    </header>
     <body>
-            <form>
-                    <label for="lfname">question</label> 
-                    <input type="button" value="answer1">
-                    <input type="button" value="answer2">
-                    <input type="button" value="answer3">
-                    <input type="button" value="answer4">
-                </form>
-        <h1>World Capitals Quizzz</h1>
-        <div class='box'>
-     <div class='qts-box'>
-         <p class='question'>Let's see how well you know world capitals.
+        <section class='qts-box'>
+            <p>Let's see how well you know world capitals.
             This quiz has only 10 questions.
             You will earn 1 point for every right answer.
             Good luck!</p>
-        <div class='answers'>
-        </div>
-     </div>
-     <div class='controls'>
+            <form class='qts-form'>
+                    <label id='q-l' for="question-label"></label> 
+                    <input class ='q-a' type="button" value="answer1">
+                    <input class ='q-a' type="button" value="answer2">
+                    <input class ='q-a' type="button" value="answer3">
+                    <input class ='q-a' type="button" value="answer4">
+            </form>
+     <section class='controls'>
          <button class='startBttn'>Start</button>
          <button class='nextBttn'>Next</button>
          <button class='resultBttn'>Result</button>
          <button class='submitBttn'>Answer</button>
-     </div>
+     </section>
 </div>
     <script type='text/javascript' src='main.js'></script>
     </body>

@@ -37,6 +37,7 @@ let userChoice ='';
 let question = $('.question');
 let answers = $('.answrBttn');
 let endGameMsg = 'That was the last question! Ready to see your score? Press "Result"!';
+let label = $("#q-l");
 
 function initialize(){
    startGame(); 
@@ -47,6 +48,7 @@ $(document).ready(initialize);
 
 
 function startGame(){
+    $('.q-a').remove();
     $('body').addClass('neutral');
     $('.nextBttn').addClass('hideBttn');
     $('.submitBttn').attr("disabled", true); 
@@ -60,6 +62,7 @@ function startGame(){
 }
 
 function postAQuestion(arr){
+    $('p').remove();
     if(qtsindx >= 10){
         result();
     }else{
@@ -67,8 +70,7 @@ function postAQuestion(arr){
     $('.submitBttn').removeClass('hideBttn');
     $('.submitBttn').attr("disabled", true); 
     $('.nextBttn').attr("disabled", true);
-    question.html(arr[qtsindx].question);
-    $('.answers').empty();
+    label.html(arr[qtsindx].question);
     addAnswersToTheQuestion(arr);
   }
 }
@@ -86,9 +88,10 @@ function result(){
 }
 
 function addAnswersToTheQuestion(arr){
+    $('.q-a').remove();
     for(let i=0; i<arr[qtsindx].answers.length; i++){
-        let newBttn = `<button class='answrBttn'>${arr[qtsindx].answers[i]}</button>`;
-        $('.answers').append(newBttn);
+        let newBttn = `<input class = "q-a" type="button" value="${arr[qtsindx].answers[i]}">`;
+        $('label').append(newBttn);
     } 
     pickTheAnswer();
 }
@@ -96,8 +99,10 @@ function addAnswersToTheQuestion(arr){
 function pickTheAnswer(){
     console.log("qtsindx: " + qtsindx);
     console.log("score: " + score);
-$('.answers').on('click', '.answrBttn', function(){
-    userChoice = this.innerText;
+    $('#q-l').on('click', '.q-a', function(){
+    //alert('ggg');
+    console.log(this.value);
+    userChoice = this.value;
     $('.submitBttn').attr("disabled", false); 
     submitAnswer();
 });
