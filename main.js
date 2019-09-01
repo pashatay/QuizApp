@@ -38,8 +38,13 @@ let question = $('.question');
 let answers = $('.answrBttn');
 let endGameMsg = 'That was the last question! Ready to see your score? Press "Result"!';
 
+function initialize(){
+   startGame(); 
+   listenToNext();
+}
 
-startGame();
+$(document).ready(initialize);
+
 
 function startGame(){
     $('body').addClass('neutral');
@@ -136,4 +141,3 @@ function scoreCount(){
     }
 };
 
-listenToNext();

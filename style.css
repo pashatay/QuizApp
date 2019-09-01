@@ -55,7 +55,7 @@ h1{
 .answers button{
     display: inline-block;
     margin: 2% 2%;
-    height: 40px;
+    height: 60px;
     width: 45%;
     text-align: center;
     outline: none;
@@ -72,6 +72,7 @@ h1{
 }
 .controls button{
     width: 20%;
+    height: 40px;
     outline: none;
     
 }
