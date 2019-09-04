@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <title>World Capitals Quizzz</title>
         <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
@@ -9,7 +9,8 @@
                 crossorigin="anonymous"></script>
     </head>
     <header>
-       <h1>World Capitals Quizzz</h1> 
+       <h1>World Capitals Quizzz</h1>
+       <h2>Your Current score:<span class='currScore'> 0</span></h2>
     </header>
     <body>
         <section class='qts-box'>
@@ -19,7 +20,7 @@
             Good luck!</p>
             <form class='qts-form'>
                     <label id='q-l' for="question-label"></label> 
-                    <input class ='q-a' type="button" value="answer1">
+                    <input class ='q-a' type="button"  value="answer1">
                     <input class ='q-a' type="button" value="answer2">
                     <input class ='q-a' type="button" value="answer3">
                     <input class ='q-a' type="button" value="answer4">
@@ -29,6 +30,7 @@
          <button class='nextBttn'>Next</button>
          <button class='resultBttn'>Result</button>
          <button class='submitBttn'>Answer</button>
+         <button class='restartBttn'>Play Again</button>
      </section>
 </div>
     <script type='text/javascript' src='main.js'></script>
