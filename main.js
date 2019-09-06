@@ -36,7 +36,7 @@ let score=0;
 let userChoice ='';
 let question = $('.question');
 let answers = $('.answrBttn');
-let endGameMsg = 'That was the last question! Ready to see your score? Press "Result"!';
+let endGameMsg = `That was the last question! You got ${score} questions right out of 10!`;
 let label = $("#q-l");
 
 function initialize(){
@@ -60,7 +60,6 @@ function startGame(){
     $('.submitBttn').attr("disabled", true); 
     $('.submitBttn').addClass('hideBttn');
     $('.nextBttn').attr("disabled", true);
-    $('.resultBttn').addClass('hideBttn');
     $('.startBttn').on('click',function(){
     $('.startBttn').addClass('hideBttn');
     postAQuestion(qts);
@@ -84,14 +83,9 @@ function postAQuestion(arr){
 function result(){
     $('.nextBttn').addClass('hideBttn');
     $('.submitBttn').addClass('hideBttn');
-    label.html(endGameMsg);
+    label.html(`That was the last question! You got ${score} questions right out of 10!`);
     $('.answers').empty();
-    $('.resultBttn').removeClass('hideBttn');
-    $('.resultBttn').on('click', function(){
-        label.html(`Your total score is ${score} out of 10!`);
-        $('.resultBttn').addClass('hideBttn');
-        $('.restartBttn').removeClass('hideBttn')
-    })
+    $('.restartBttn').removeClass('hideBttn');
 }
 
 function addAnswersToTheQuestion(arr){
