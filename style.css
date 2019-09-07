@@ -79,16 +79,20 @@ h2{
     /*display: inline-block;*/
     padding: 4px 11px;
     cursor: pointer;
-    border: 5px solid red;
-    background: grey;
+    border: 3px solid rgb(2, 82, 173);
+    background: rgb(253, 253, 253);
 }
 
+.qts-form label:hover{
+    background: rgb(197, 243, 196);
+}
 .qts-form input[type="radio"]{
     display: none;    
 }
-.qts-form input[type=radio]:checked + label{
-    background-color:#bfb;
-    border-color: #4c4;
+//trying to apply this to checked btn
+.qr{
+    background:#bfb;
+    border: 5px solid #4c4;
 }
 
 .q-a {

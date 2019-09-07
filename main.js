@@ -90,7 +90,7 @@ function result(){
 function addAnswersToTheQuestion(arr){
     $('label, input').remove();
     for(let i=0; i<arr[qtsindx].answers.length; i++){
-        let newBttn = `<label class = "q-a" for="${arr[qtsindx].answers[i]}">${arr[qtsindx].answers[i]}<input  type="radio" name="radio-answer" value="${arr[qtsindx].answers[i]}"></label>`;
+        let newBttn = `<label class = "q-a" for="${arr[qtsindx].answers[i]}">${arr[qtsindx].answers[i]}</label><input id="${arr[qtsindx].answers[i]}" type="radio" name="${arr[qtsindx].answers[i]}" value="${arr[qtsindx].answers[i]}" >`;
         $('.qts-form').append(newBttn);
     } 
     pickTheAnswer();
@@ -101,6 +101,7 @@ function pickTheAnswer(){
     console.log("score: " + score);
     $('.qts-form').on('click', '.q-a', function(){
     //alert('ggg');
+    //$(this).addClass('qr');
     console.log(this);
     console.log(this.innerText);
     userChoice = this.innerText;
