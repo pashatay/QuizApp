@@ -72,16 +72,23 @@ h2{
 }
 
 .qts-form label{
-    font-size: 32px;
+    font-size: 20px;
     margin: 5% auto;
     width: 40%;
-    height: 80px;
-    display: inline-block;
+    height: 60px;
+    /*display: inline-block;*/
     padding: 4px 11px;
     cursor: pointer;
-    border: 1px solid grey;
+    border: 5px solid red;
     background: grey;
-    border-radius: 10%;
+}
+
+.qts-form input[type="radio"]{
+    display: none;    
+}
+.qts-form input[type=radio]:checked + label{
+    background-color:#bfb;
+    border-color: #4c4;
 }
 
 .q-a {
@@ -94,9 +101,6 @@ h2{
     font-size: 18px;
 }
 
-.q-a:focus{
-    border: 2px solid #2980b9;
-}
 .controls{
     display: flex;
     margin: 5% auto;
