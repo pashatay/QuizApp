@@ -68,11 +68,20 @@ h2{
     margin: 0 auto;
     text-align: center;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .qts-form label{
     font-size: 32px;
     margin: 5% auto;
+    width: 40%;
+    height: 80px;
+    display: inline-block;
+    padding: 4px 11px;
+    cursor: pointer;
+    border: 1px solid grey;
+    background: grey;
+    border-radius: 10%;
 }
 
 .q-a {
