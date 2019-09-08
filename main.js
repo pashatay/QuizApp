@@ -100,8 +100,11 @@ function pickTheAnswer(){
     console.log("qtsindx: " + qtsindx);
     console.log("score: " + score);
     $('.qts-form').on('click', '.q-a', function(){
-    //alert('ggg');
-    $(this).addClass('qr');
+    let inpt = $(this).find('input');
+    // if($(inpt).is(':checked')){
+    //     console.log(inpt);   
+    // }
+    $(this).css("background", "rgb(2, 82, 173)");
     console.log(this);
     console.log(this.innerText);
     userChoice = this.innerText;
@@ -123,7 +126,7 @@ function submitAnswer(){
         $('body').removeClass('neutral');
         $('body').removeClass('ranswer');
         $('body').addClass('wronganswer');
-        question.html(`The right answer is ${qts[qtsindx].right}!`);
+        $('p').text(`The right answer is ${qts[qtsindx].right}!`);
     }
     })
 }

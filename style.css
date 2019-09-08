@@ -35,13 +35,19 @@ p{
     margin: auto;
     text-align: center;
 }
-
+header{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
 h1 {
+    display: block;
     text-align: center;
     margin:10% auto;
     color: white;
 }
 h2{
+    display: block;
     position: absolute;
     top: 3%;
     left: 75%;
@@ -99,8 +105,8 @@ h2{
 }*/
 
 .qr{
-    background:#bfb;
-    border: 5px solid #4c4;
+    background-color:#bfb;
+    border: 5px solid red;
 }
 
 .q-a {
