@@ -99,14 +99,13 @@ function addAnswersToTheQuestion(arr){
 function pickTheAnswer(){
     console.log("qtsindx: " + qtsindx);
     console.log("score: " + score);
+
     $('.qts-form').on('click', '.q-a', function(){
     let inpt = $(this).find('input');
-    // if($(inpt).is(':checked')){
-    //     console.log(inpt);   
-    // }
+    
+    $("input:radio[name=radio-answer]").attr('disabled', true);
     $(this).css("background", "rgb(2, 82, 173)");
-    console.log(this);
-    console.log(this.innerText);
+    
     userChoice = this.innerText;
     $('.submitBttn').attr("disabled", false); 
     submitAnswer();
