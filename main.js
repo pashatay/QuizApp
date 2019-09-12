@@ -104,7 +104,8 @@ function pickTheAnswer(){
     let inpt = $(this).find('input');
     
     $("input:radio[name=radio-answer]").attr('disabled', true);
-    $(this).css("background", "rgb(2, 82, 173)");
+    $(this).addClass("qr");
+    //$(this).css("background", "rgb(2, 82, 173)");
     
     userChoice = this.innerText;
     $('.submitBttn').attr("disabled", false); 
