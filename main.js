@@ -102,7 +102,7 @@ function pickTheAnswer(){
 
     $('.qts-form').on('click', '.q-a', function(){
     let inpt = $(this).find('input');
-    
+    console.log(this);
     $("input:radio[name=radio-answer]").attr('disabled', true);
     $(this).addClass("qr");
     //$(this).css("background", "rgb(2, 82, 173)");
