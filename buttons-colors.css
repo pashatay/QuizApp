@@ -1,0 +1,105 @@
+.neutral{
+    background: #00B4DB;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0083B0, #00B4DB);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0083B0, #00B4DB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+ }
+.ranswer{
+    background: #11998e;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+}
+.wronganswer{
+    background: #ED213A;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #93291E, #ED213A);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #93291E, #ED213A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+.qts-box{
+    display: flex;
+    flex-flow: column wrap;
+    width: 60%;
+    padding: 1px;
+    margin: 0 20%;
+}
+
+.qts-form{
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.q-a {
+    display: flex;
+    justify-content: center;
+    margin: 3% auto;
+    height: 40px;
+    width: 60%;
+    outline: none;
+    font-size: 18px;
+}
+
+.qts-form label{
+    display: flex;
+    font-size: 2vw;
+    margin: 5% auto;
+    width: 40%;
+    height: 60px;
+    /*display: inline-block;*/
+    padding: 4px 11px;
+    cursor: pointer;
+    color: white;
+    border: 3px solid rgb(2, 82, 173);
+    text-align: center;
+    line-height: 60px;
+}
+
+.qts-form label:hover{
+    background: rgb(255, 255, 255);
+    color: rgb(2, 82, 173);
+}
+
+.qts-form input[type="radio"]{
+    /*display: none;*/ 
+    opacity: 0;
+    position: fixed;
+    width: 0;
+}
+
+
+.qts-form label.qr{
+    top: 0;
+    left: 0;
+    background: rgb(243, 241, 241);
+    z-index: 999;
+    transition: all 0.1s ease-in;
+    color: rgb(2, 82, 173);
+    font-weight: 800;
+    -webkit-font-smoothing: antialiased;
+    -moz-box-shadow:    inset 0 0 7px rgb(2, 82, 173);
+    -webkit-box-shadow: inset 0 0 7px rgb(2, 82, 173);
+    box-shadow:         inset 0 0 7px rgb(2, 82, 173);
+}
+
+.controls{
+    display: flex;
+    margin: 5% auto;
+    text-align: center;
+    width: 100%;
+}
+.controls button{
+    width: 15%;
+    height: 40px;
+    outline: none;
+    margin:auto;
+    border: 1px solid rgb(2, 82, 173);
+    
+}
+.controls button:hover{
+   background: rgb(2, 82, 173);
+   color: white;
+}
+
+

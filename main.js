@@ -3,7 +3,7 @@ const qts = [
      answers: ['Ithasa', 'Lima', 'St.Pedro', 'Grand Peru'],
      right: 'Lima'},
      {question: 'Capital of Russia? 2/10',
-     answers: ['St.Peterburg', 'Vladivostok', 'Mosgew', 'Moscow'],
+     answers: ['St.Peterburg', 'Vladivostok', 'Kazan', 'Moscow'],
      right: 'Moscow'},
      {question: 'Capital of Brazil? 3/10',
      answers: ['Sao Paolo', 'Brasilia', 'Rio de Janeiro', 'Vitoria'],
@@ -66,7 +66,7 @@ function startGame(){
 }
 
 function postAQuestion(arr){ 
-    if(qtsindx >= 10){
+    if(qtsindx >= qts.length){
         result();
     }else{
     $('.nextBttn').removeClass('hideBttn');
@@ -81,8 +81,8 @@ function postAQuestion(arr){
 function result(){
     $('.nextBttn').addClass('hideBttn');
     $('.submitBttn').addClass('hideBttn');
-    score !=1 ? $('p').text(`That was the last question! You got ${score} questions right out of 10!`) : 
-    $('p').text(`That was the last question! You got ${score} question right out of 10!`);
+    score !=1 ? $('p').text(`That was the last question! You got ${score} questions right out of ${qts.length}!`) : 
+    $('p').text(`That was the last question! You got ${score} question right out of ${qts.length}!`);
     $('label, input').remove();
     $('.restartBttn').removeClass('hideBttn');
 }
@@ -99,14 +99,12 @@ function addAnswersToTheQuestion(arr){
 function pickTheAnswer(){
     console.log("qtsindx: " + qtsindx);
     console.log("score: " + score);
-
     $('.qts-form').on('click', '.q-a', function(){
     let inpt = $(this).find('input');
     console.log(this);
     $("input:radio[name=radio-answer]").attr('disabled', true);
     $('.qts-form label').removeClass("qr");
     $(this).addClass("qr");
-    
     userChoice = this.innerText;
     $('.submitBttn').attr("disabled", false); 
     submitAnswer();
@@ -115,19 +113,24 @@ function pickTheAnswer(){
 
 function submitAnswer(){
     $('.submitBttn').on('click', function (){
+       $('label, input').remove();
        $('.q-a').attr("disabled", true);  
        $('.nextBttn').attr("disabled", false); 
        $('.submitBttn').attr("disabled", true); 
+       $('.qts-form label').attr("disabled", true);
        $('.qts-form label').find('input').attr("disabled", true);
        if(userChoice === qts[qtsindx].right){
         $('body').removeClass('neutral');
         $('body').removeClass('wronganswer');
         $('body').addClass('ranswer');
+        $('p').text(`You are right!`);
+        //$("input:radio[name=radio-answer]").attr('disabled', true);
       }else{
         $('body').removeClass('neutral');
         $('body').removeClass('ranswer');
         $('body').addClass('wronganswer');
-        $('p').text(`The right answer is ${qts[qtsindx].right}!`);
+        $('p').text(`Oh, no! The right answer is ${qts[qtsindx].right}!`);
+        //$("input:radio[name=radio-answer]").attr('disabled', true);
     }
     })
 }
@@ -137,8 +140,7 @@ function listenToNext() {
   $(document).on('click', '.nextBttn', function(){  
     $('body').removeClass('ranswer');
     $('body').removeClass('wronganswer'); 
-    $('body').addClass('neutral');
-     
+    $('body').addClass('neutral'); 
     scoreCount();      
     postAQuestion(qts);
   })

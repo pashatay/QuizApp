@@ -1,35 +1,20 @@
+*{
+    width: auto;
+    height: auto;
+}
 body{
-    width: 100vw;
-    height: 100vh;
+    width: auto;
+    height: auto;
     font-family: 'Lato', sans-serif;
     box-sizing: border-box;
 }
-.neutral{
-background: #00B4DB;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #0083B0, #00B4DB);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #0083B0, #00B4DB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-}
-.ranswer{
-    background: #11998e;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
-}
-.ranswerborder{
-    border: 2px solid green;
-}
-.wronganswer{
-background: #ED213A;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #93291E, #ED213A);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #93291E, #ED213A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-}
 .hideBttn{
     display: none;
 }
 
 p{
-    font-size: 24px;
+    font-size: 3vw;
     color: white;
     display: flex;
     margin: auto;
@@ -43,108 +28,22 @@ header{
 h1 {
     display: block;
     text-align: center;
-    margin:10% auto;
+    margin: 7% auto;
     color: white;
+    font-size: 4vw;
 }
 h2{
     display: block;
     position: absolute;
     top: 3%;
     left: 75%;
-    font-size: 18px;
+    font-size: 2vw;
     color: white;
 }
 .currScore{
     color: rgb(2, 82, 173);
     font-weight: bold;
-    font-size: 22px;
+    font-size: 2vw;
     padding: 3%;
-}
-
-.qts-box{
-    display: flex;
-    flex-flow: column wrap;
-    width: 60%;
-    padding: 1px;
-    margin: 0 20%;
-}
-
-.qts-form{
-    width: 70%;
-    margin: 0 auto;
-    text-align: center;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.qts-form label{
-    font-size: 20px;
-    margin: 5% auto;
-    width: 40%;
-    height: 60px;
-    /*display: inline-block;*/
-    padding: 4px 11px;
-    cursor: pointer;
-    color: white;
-    border: 3px solid rgb(2, 82, 173);
-    text-align: center;
-    line-height: 60px;
-}
-
-.qts-form label:hover{
-    background: rgb(255, 255, 255);
-    color: rgb(2, 82, 173);
-}
-.qts-form input[type="radio"]{
-    /*display: none;*/ 
-    opacity: 0;
-    position: fixed;
-    width: 0;
-}
-/*.qts-form label input[type="radio"]:checked {
-    background-color:#bfb;
-    border-color: #4c4;
-}*/
-
-.qts-form label.qr{
-    top: 0;
-    left: 0;
-    background: rgb(243, 241, 241);
-    z-index: 999;
-    transition: all 0.1s ease-in;
-    color: rgb(2, 82, 173);
-    font-weight: 800;
-    -webkit-font-smoothing: antialiased;
-    -moz-box-shadow:    inset 0 0 7px rgb(2, 82, 173);
-    -webkit-box-shadow: inset 0 0 7px rgb(2, 82, 173);
-    box-shadow:         inset 0 0 7px rgb(2, 82, 173);
-}
-
-.q-a {
-    display: flex;
-    justify-content: center;
-    margin: 3% auto;
-    height: 40px;
-    width: 60%;
-    outline: none;
-    font-size: 18px;
-}
-
-.controls{
-    display: flex;
-    margin: 5% auto;
-    text-align: center;
-}
-.controls button{
-    width: 80px;
-    height: 40px;
-    outline: none;
-    margin: 2%;
-    border: 1px solid rgb(2, 82, 173);
-    
-}
-.controls button:hover{
-   background: rgb(2, 82, 173);
-   color: white;
 }
 
