@@ -106,7 +106,6 @@ function pickTheAnswer(){
     $("input:radio[name=radio-answer]").attr('disabled', true);
     $('.qts-form label').removeClass("qr");
     $(this).addClass("qr");
-    //$(this).css("background", "rgb(2, 82, 173)");
     
     userChoice = this.innerText;
     $('.submitBttn').attr("disabled", false); 
@@ -119,6 +118,7 @@ function submitAnswer(){
        $('.q-a').attr("disabled", true);  
        $('.nextBttn').attr("disabled", false); 
        $('.submitBttn').attr("disabled", true); 
+       $('.qts-form label').find('input').attr("disabled", true);
        if(userChoice === qts[qtsindx].right){
         $('body').removeClass('neutral');
         $('body').removeClass('wronganswer');
