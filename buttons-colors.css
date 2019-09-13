@@ -62,14 +62,12 @@
 }
 
 .qts-form input[type="radio"]{
-    /*display: none;*/ 
     opacity: 0;
     position: fixed;
     width: 0;
 }
 
-
-.qts-form label.qr{
+.qts-form label.pick{
     top: 0;
     left: 0;
     background: rgb(243, 241, 241);

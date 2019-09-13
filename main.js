@@ -103,8 +103,8 @@ function pickTheAnswer(){
     let inpt = $(this).find('input');
     console.log(this);
     $("input:radio[name=radio-answer]").attr('disabled', true);
-    $('.qts-form label').removeClass("qr");
-    $(this).addClass("qr");
+    $('.qts-form label').removeClass("pick");
+    $(this).addClass("pick");
     userChoice = this.innerText;
     $('.submitBttn').attr("disabled", false); 
     submitAnswer();
