@@ -1,7 +1,4 @@
-*{
-    width: auto;
-    height: auto;
-}
+
 body{
     width: auto;
     height: auto;
@@ -24,6 +21,7 @@ header{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    margin: 3%;
 }
 h1 {
     display: block;
@@ -37,13 +35,13 @@ h2{
     position: absolute;
     top: 3%;
     left: 75%;
-    font-size: 2vw;
+    font-size: 2.5vw;
     color: white;
 }
 .currScore{
     color: rgb(2, 82, 173);
     font-weight: bold;
-    font-size: 2vw;
+    font-size: 2.5vw;
     padding: 3%;
 }
 
