@@ -1,7 +1,4 @@
 @media screen and (max-width: 850px) {
-    .qts-form label{
-        font-size: 3vw;
-    }
     p{
         font-size: 6vw;
     }
@@ -13,13 +10,14 @@
     h1{
         display: block;
         font-size: 6vw; 
+        margin: auto;
     }
     h2{
         font-size: 5vw; 
         display: block;
         position: absolute;
-        top: 7%;
-        left: 43%;
+        left: 33%;
+        padding: 3%;
     }
     .currScore{
         font-size: 5vw; 
@@ -40,6 +38,6 @@
     .qts-form label{
         width: 100%;
         height: 60px;
-        font-size: 6vw;
+        font-size: 5vw;
     }
 }
