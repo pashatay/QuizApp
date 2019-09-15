@@ -1,6 +1,7 @@
 @media screen and (max-width: 850px) {
     p{
         font-size: 6vw;
+        padding: 5%;
     }
     header{
         display: flex;
