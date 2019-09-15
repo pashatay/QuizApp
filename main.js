@@ -51,6 +51,7 @@ function restart(){
         location.reload();
     })
 }
+
 function startGame(){
     $('.q-a').remove();
     $('body').addClass('neutral');
@@ -58,7 +59,6 @@ function startGame(){
     $('.nextBttn').addClass('hideBttn');
     $('.submitBttn').attr("disabled", true); 
     $('.submitBttn').addClass('hideBttn');
-    $('.nextBttn').attr("disabled", true);
     $('.startBttn').on('click',function(){
     $('.startBttn').addClass('hideBttn');
     postAQuestion(qts);
@@ -69,10 +69,10 @@ function postAQuestion(arr){
     if(qtsindx >= qts.length){
         result();
     }else{
-    $('.nextBttn').removeClass('hideBttn');
+    //$('.nextBttn').removeClass('hideBttn');
     $('.submitBttn').removeClass('hideBttn');
     $('.submitBttn').attr("disabled", true); 
-    $('.nextBttn').attr("disabled", true);
+    $('.nextBttn').addClass('hideBttn');
     $('p').text(arr[qtsindx].question);
     addAnswersToTheQuestion(arr);
   }
@@ -115,8 +115,8 @@ function submitAnswer(){
     $('.submitBttn').on('click', function (){
        $('label, input').remove();
        $('.q-a').attr("disabled", true);  
-       $('.nextBttn').attr("disabled", false); 
-       $('.submitBttn').attr("disabled", true); 
+       $('.submitBttn').addClass('hideBttn'); 
+       $('.nextBttn').removeClass('hideBttn');
        $('.qts-form label').attr("disabled", true);
        $('.qts-form label').find('input').attr("disabled", true);
        if(userChoice === qts[qtsindx].right){
