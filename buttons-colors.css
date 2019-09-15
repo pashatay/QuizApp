@@ -95,7 +95,7 @@
     font-size: 2em;
     background: white;
     border: 1px solid rgb(2, 82, 173);
-    
+    text-align: center;
 }
 .controls button:hover{
    background: rgb(2, 82, 173);

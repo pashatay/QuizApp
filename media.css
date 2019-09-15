@@ -32,9 +32,10 @@
         width: 100%;
     }
     .controls button{
-        width: 30vw;
+        width: 33vw;
         height: 12vw;
         font-size: 1.5em;
+        text-align: center;
     }
     .qts-form label{
         width: 100%;
