@@ -31,7 +31,7 @@
     }
     .controls button{
         width: 33vw;
-        height: 12vw;
+        height: auto;
         font-size: 1.5em;
         text-align: center;
     }
