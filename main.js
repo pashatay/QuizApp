@@ -69,7 +69,6 @@ function postAQuestion(arr){
     if(qtsindx >= qts.length){
         result();
     }else{
-    //$('.nextBttn').removeClass('hideBttn');
     $('.submitBttn').removeClass('hideBttn');
     $('.submitBttn').attr("disabled", true); 
     $('.nextBttn').addClass('hideBttn');
@@ -97,11 +96,8 @@ function addAnswersToTheQuestion(arr){
 }
 
 function pickTheAnswer(){
-    console.log("qtsindx: " + qtsindx);
-    console.log("score: " + score);
     $('.qts-form').on('click', '.q-a', function(){
     let inpt = $(this).find('input');
-    console.log(this);
     $("input:radio[name=radio-answer]").attr('disabled', true);
     $('.qts-form label').removeClass("pick");
     $(this).addClass("pick");
@@ -124,19 +120,16 @@ function submitAnswer(){
         $('body').removeClass('wronganswer');
         $('body').addClass('ranswer');
         $('p').text(`You are right!`);
-        //$("input:radio[name=radio-answer]").attr('disabled', true);
       }else{
         $('body').removeClass('neutral');
         $('body').removeClass('ranswer');
         $('body').addClass('wronganswer');
         $('p').text(`Oh, no! The right answer is ${qts[qtsindx].right}!`);
-        //$("input:radio[name=radio-answer]").attr('disabled', true);
     }
     })
 }
 
 function listenToNext() {
-  // Do it like this because it only adds one listener
   $(document).on('click', '.nextBttn', function(){  
     $('body').removeClass('ranswer');
     $('body').removeClass('wronganswer'); 
